@@ -200,12 +200,12 @@ main ()
   echo ""
 
   install_git_hooks
-  install_dependencies
+  # install_dependencies
 
   if [ -f Cartfile ]
   then
     install_carthage
-    bootstrap_carthage
+    # bootstrap_carthage
   fi
 
   if [ -f Gemfile ]

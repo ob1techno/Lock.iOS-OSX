@@ -1,0 +1,6 @@
+framework module TouchIDAuth {
+  umbrella header "TouchIDAuth.h"
+
+  export *
+  module * { export * }
+}

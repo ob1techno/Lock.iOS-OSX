@@ -29,26 +29,29 @@ main ()
     NO_CARTHAGE_UPDATE=true script/bootstrap
     local status=$?
 
-    if [ $status -eq 0 ]
-    then
-      echo ""
-      echo ""
-      echo "####### Build & Test Phase #######"
-      echo ""
-      set -o pipefail && script/test 2>&1 | tee /tmp/build.test-output.txt
-      status=$?
-      if [ ! $status -eq 0 ]
-      then
-        log_file_path=`cat /tmp/build.test-output.txt | tail -n 100 | perl -l -ne '/(\/var\/folders.*\/com\.apple\.dt\.XCTest-status.*)\)/ && print $1'`
-        if [ ! -z "$log_file_path" ]
-        then
-          echo ""
-          echo " → The tests have failed. Printing output of log file '$log_file_path'."
-          cat $log_file_path
-          echo ""
-        fi
-      fi
-    fi
+    xcodebuild -project Lock.xcodeproj -scheme Lock-iOS -destination 'platform=iOS Simulator,name=iPhone 6s,OS=latest' clean build
+    xcodebuild -project Lock.xcodeproj -scheme Lock-iOS -destination 'platform=iOS Simulator,name=iPhone 6s,OS=latest' test
+
+    # if [ $status -eq 0 ]
+    # then
+    #   echo ""
+    #   echo ""
+    #   echo "####### Build & Test Phase #######"
+    #   echo ""
+    #   set -o pipefail && script/test 2>&1 | tee /tmp/build.test-output.txt
+    #   status=$?
+    #   if [ ! $status -eq 0 ]
+    #   then
+    #     log_file_path=`cat /tmp/build.test-output.txt | tail -n 100 | perl -l -ne '/(\/var\/folders.*\/com\.apple\.dt\.XCTest-status.*)\)/ && print $1'`
+    #     if [ ! -z "$log_file_path" ]
+    #     then
+    #       echo ""
+    #       echo " → The tests have failed. Printing output of log file '$log_file_path'."
+    #       cat $log_file_path
+    #       echo ""
+    #     fi
+    #   fi
+    # fi
 
     if [ -f Cartfile ] && [ -f "$SCRIPT_DIR/certificates/cibot.p12" ]
     then

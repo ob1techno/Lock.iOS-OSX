@@ -2,7 +2,7 @@
 .DS_Store
 
 # Xcode
-build/
+#build/
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -27,7 +27,12 @@ examples/**/Pods/
 **/Pods/
 
 # Carthage
-Carthage/
+!Carthage/Build/iOS
+!Carthage/Build/Mac
+Carthage/Build/tvOS
+Carthage/Build/watchOS
+Carthage/Checkouts
+*.dSYM
 
 #Fabric
 .fabric_key
