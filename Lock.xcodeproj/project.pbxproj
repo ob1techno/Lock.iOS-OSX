@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F003C641BEA983A005630FE /* A0WebKitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F003C621BEA983A005630FE /* A0WebKitViewController.xib */; };
+		5F003C651BEA983A005630FE /* A0WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F003C631BEA983A005630FE /* A0WebViewController.xib */; };
 		5F6641891BEA4E9300ECA900 /* A0PKCE.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F6641871BEA4E9300ECA900 /* A0PKCE.h */; };
 		5F66418A1BEA4E9300ECA900 /* A0PKCE.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F6641871BEA4E9300ECA900 /* A0PKCE.h */; };
 		5F66418B1BEA4E9300ECA900 /* A0PKCE.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F6641881BEA4E9300ECA900 /* A0PKCE.m */; };
@@ -460,6 +462,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5F003C621BEA983A005630FE /* A0WebKitViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = A0WebKitViewController.xib; sourceTree = "<group>"; };
+		5F003C631BEA983A005630FE /* A0WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = A0WebViewController.xib; sourceTree = "<group>"; };
 		5F6641871BEA4E9300ECA900 /* A0PKCE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = A0PKCE.h; sourceTree = "<group>"; };
 		5F6641881BEA4E9300ECA900 /* A0PKCE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = A0PKCE.m; sourceTree = "<group>"; };
 		5F66418D1BEA5A9F00ECA900 /* A0PKCESpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = A0PKCESpec.swift; sourceTree = "<group>"; };
@@ -881,6 +885,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F003C611BEA983A005630FE /* NIBs */ = {
+			isa = PBXGroup;
+			children = (
+				5F003C621BEA983A005630FE /* A0WebKitViewController.xib */,
+				5F003C631BEA983A005630FE /* A0WebViewController.xib */,
+			);
+			path = NIBs;
+			sourceTree = "<group>";
+		};
 		5FBACFEB1BE7AF8700703DD1 = {
 			isa = PBXGroup;
 			children = (
@@ -1077,6 +1090,7 @@
 		5FBAD1001BE7B92900703DD1 /* WebView */ = {
 			isa = PBXGroup;
 			children = (
+				5F003C611BEA983A005630FE /* NIBs */,
 				5FBAD1011BE7B92900703DD1 /* A0WebAuthenticable.h */,
 				5FBAD1021BE7B92900703DD1 /* A0WebKitViewController.h */,
 				5FBAD1031BE7B92900703DD1 /* A0WebKitViewController.m */,
@@ -1933,6 +1947,7 @@
 				5FBAD4271BE7F0BA00703DD1 /* A0SMSCodeViewController.xib in Resources */,
 				5FBAD2241BE7BD4C00703DD1 /* A0ServiceTableViewCell.xib in Resources */,
 				5FBAD2271BE7BD4C00703DD1 /* A0TitleView.xib in Resources */,
+				5F003C641BEA983A005630FE /* A0WebKitViewController.xib in Resources */,
 				5FBAD42A1BE7F0BA00703DD1 /* A0SMSSendCodeViewController.xib in Resources */,
 				5FBAD2201BE7BD4C00703DD1 /* A0LoadingViewController.xib in Resources */,
 				5FBAD2231BE7BD4C00703DD1 /* A0ServiceCollectionViewCell.xib in Resources */,
@@ -1943,6 +1958,7 @@
 				5FBAD4261BE7F0BA00703DD1 /* A0CountryCodeTableViewController.xib in Resources */,
 				5FBAD21F1BE7BD4C00703DD1 /* A0FullLoginViewController.xib in Resources */,
 				5FBAD43A1BE7F0D100703DD1 /* A0EmailLockViewController.xib in Resources */,
+				5F003C651BEA983A005630FE /* A0WebViewController.xib in Resources */,
 				5FBAD4251BE7F0BA00703DD1 /* A0CountryCodeTableViewCell.xib in Resources */,
 				5FBAD41B1BE7F09600703DD1 /* A0TouchIDRegisterViewController.xib in Resources */,
 				5FBAD4391BE7F0D100703DD1 /* A0EmailCodeViewController.xib in Resources */,
